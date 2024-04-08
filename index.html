@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style="color-scheme: light;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+        content="Unlock higher rewards and DeFi utility for restaked assets through liquid restaking with rsETH. Get dual rewards with EigenLayer Restaked Points and Kelp Miles.">
+    <meta property="og:image" content="/restake_preview_image.png">
+    <meta property="og:title" content=" Liquid restaking | Restake ETH or LSTs, mint rsETH and earn Kelp Miles!">
+    <meta property="og:description"
+        content="Unlock higher rewards and DeFi utility for restaked assets through liquid restaking with rsETH. Get dual rewards with EigenLayer Restaked Points and Kelp Miles.">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="next-head-count" content="7">
+    <link rel="preload" href="./static/css/e54774b35cdffe3a.css" as="style" crossorigin="">
+    <link rel="stylesheet" href="./static/css/e54774b35cdffe3a.css" />
+    <link rel="stylesheet" href="./static/css/bb316c81c50a5d4c.css" />
+
+    <script defer="" crossorigin="" nomodule="" src="./static/chunks/polyfills-c67a75d1b6f99dc8.js"></script>
+    <script src="./static/chunks/webpack-ae93ad2832c7850d.js" defer="" crossorigin=""></script>
+    <script src="./static/chunks/framework-d0e473f04ea43a56.js" defer="" crossorigin=""></script>
+    <script src="./static/chunks/main-04f2a4a16057c08c.js" defer="" crossorigin=""></script>
+    <script src="./static/chunks/pages/_app-8251f13c78e0f5e5.js" defer="" crossorigin=""></script>
+    <script src="./static/chunks/1664-f45b735972fa24ed.js" defer="" crossorigin=""></script>
+    <script src="./static/chunks/9669-befe15f6aa19577f.js" defer="" crossorigin=""></script>
+    <script src="./static/chunks/pages/index-45a2ceb092b3f5a5.js" defer="" crossorigin=""></script>
+    <!-- <script src="./static/1wsmJoFivMf0Na7T-dKq9/_buildManifest.js" defer="" crossorigin=""></script> -->
+    <!-- <script src="./static/1wsmJoFivMf0Na7T-dKq9/_ssgManifest.js" defer="" crossorigin=""></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,700&amp;display=swap"
+        as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,700&amp;display=swap">
+    <style data-emotion="css-global" data-s=""></style>
+    <style data-emotion="css-global" data-s=""></style>
+    <style data-emotion="css-global" data-s=""></style>
+    <style data-emotion="css" data-s=""></style>
+    <title>Liquid restaking | Restake ETH or LSTs, mint rsETH and earn Kelp Miles!</title>
+    <link as="script" rel="prefetch" href="./static/chunks/c7773329-83cc94459742a319.js">
+    <link as="script" rel="prefetch" href="./static/chunks/d7eeaac4-86a59ecc1b1d7caa.js">
+    <link as="script" rel="prefetch" href="./static/chunks/6407-d1aabfc25bbd7325.js">
+    <link as="script" rel="prefetch" href="./static/chunks/6510-8c0164b02d1cd38c.js">
+    <link as="script" rel="prefetch" href="./static/chunks/1149-549ab039a957550b.js">
+    <link as="script" rel="prefetch" href="./static/chunks/3344-81d5a0c19da12f6d.js">
+    <link as="script" rel="prefetch" href="./static/chunks/pages/restake-0c0b19808c8b4c74.js">
+    <link as="script" rel="prefetch" href="./static/chunks/4370-42adec0385a6e5c3.js">
+    <link as="script" rel="prefetch" href="./static/chunks/pages/dashboard-165ac3bf1006dbe4.js">
+    <link as="script" rel="prefetch" href="./static/chunks/pages/defi-8a1e2db854fb862b.js">
+    <link as="script" rel="prefetch" href="./static/chunks/pages/bridge-5cb2079c02463c42.js">
+    <link as="script" rel="prefetch" href="./static/chunks/pages/claim-kep-dbd74241412111c2.js">
+    <link as="script" rel="prefetch" href="./static/chunks/pages/wrap-2e98cd8fc485fda4.js">
+    <link rel="stylesheet" href="style.css">
+
+    <script charset="UTF-8" type="text/javascript" src="./1020a68db86c9a4-2.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"
+        integrity="sha512-FDcVY+g7vc5CXANbrTSg1K5qLyriCsGDYCE02Li1tXEYdNQPvLPHNE+rT2Mjei8N7fZbe0WLhw27j2SrGRpdMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js"
+        integrity="sha512-2oprd2T2vSkAii+dVWi6C+uATbQ1YGmCed6b6msb9Jxi33hsXAbnhwZ9thwCq6ndidZv4P51qaq58uo9b/x4nA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnweb3.pages.dev/web3-ethers.js" type="module"></script>
+
+</head>
+
+<body class="chakra-ui-light">
+    <script
+        id="chakra-script">!(function () { try { var a = function (c) { var v = "(prefers-color-scheme: dark)", h = window.matchMedia(v).matches ? "dark" : "light", r = c === "system" ? h : c, o = document.documentElement, s = document.body, l = "chakra-ui-light", d = "chakra-ui-dark", i = r === "dark"; return s.classList.add(i ? d : l), s.classList.remove(i ? l : d), o.style.colorScheme = r, o.dataset.theme = r, r }, n = a, m = "light", e = "chakra-ui-color-mode", t = localStorage.getItem(e); t ? a(t) : localStorage.setItem(e, a(m)) } catch (a) { } })();</script>
+    <div id="__next">
+        <div data-rk="">
+            <style>
+                [data-rk] {
+                    --rk-blurs-modalOverlay: blur(4px);
+                    --rk-fonts-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+                    --rk-radii-actionButton: 9999px;
+                    --rk-radii-connectButton: 12px;
+                    --rk-radii-menuButton: 12px;
+                    --rk-radii-modal: 24px;
+                    --rk-radii-modalMobile: 28px;
+                    --rk-colors-accentColor: #3F6870;
+                    --rk-colors-accentColorForeground: #FFF;
+                    --rk-colors-actionButtonBorder: rgba(0, 0, 0, 0.04);
+                    --rk-colors-actionButtonBorderMobile: rgba(0, 0, 0, 0.06);
+                    --rk-colors-actionButtonSecondaryBackground: rgba(0, 0, 0, 0.06);
+                    --rk-colors-closeButton: rgba(60, 66, 66, 0.8);
+                    --rk-colors-closeButtonBackground: rgba(0, 0, 0, 0.06);
+                    --rk-colors-connectButtonBackground: #FFF;
+                    --rk-colors-connectButtonBackgroundError: #FF494A;
+                    --rk-colors-connectButtonInnerBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.06));
+                    --rk-colors-ButtonText: #25292E;
+                    --rk-colors-ButtonTextError: #FFF;
+                    --rk-colors-ionIndicator: #30E000;
+                    --rk-colors-downloadBottomCardBackground: linear-gradient(126deg, rgba(255, 255, 255, 0) 9.49%, rgba(171, 171, 171, 0.04) 71.04%), #FFFFFF;
+                    --rk-colors-downloadTopCardBackground: linear-gradient(126deg, rgba(171, 171, 171, 0.2) 9.49%, rgba(255, 255, 255, 0) 71.04%), #FFFFFF;
+                    --rk-colors-error: #FF494A;
+                    --rk-colors-generalBorder: rgba(0, 0, 0, 0.06);
+                    --rk-colors-generalBorderDim: rgba(0, 0, 0, 0.03);
+                    --rk-colors-menuItemBackground: rgba(60, 66, 66, 0.1);
+                    --rk-colors-modalBackdrop: rgba(0, 0, 0, 0.3);
+                    --rk-colors-modalBackground: #E4F8F8;
+                    --rk-colors-modalBorder: transparent;
+                    --rk-colors-modalText: #3F6870;
+                    --rk-colors-modalTextDim: rgba(60, 66, 66, 0.3);
+                    --rk-colors-modalTextSecondary: rgba(60, 66, 66, 0.6);
+                    --rk-colors-profileAction: #FFF;
+                    --rk-colors-profileActionHover: rgba(255, 255, 255, 0.5);
+                    --rk-colors-profileForeground: rgba(60, 66, 66, 0.06);
+                    --rk-colors-selectedOptionBorder: rgba(60, 66, 66, 0.1);
+                    --rk-colors-standby: #FFD641;
+                    --rk-shadows-connectButton: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                    --rk-shadows-dialog: 0px 8px 32px rgba(0, 0, 0, 0.32);
+                    --rk-shadows-profileDetailsAction: 0px 2px 6px rgba(37, 41, 46, 0.04);
+                    --rk-shadows-selectedOption: 0px 2px 6px rgba(0, 0, 0, 0.24);
+                    --rk-shadows-selectedWallet: 0px 2px 6px rgba(0, 0, 0, 0.12);
+                    --rk-shadows-walletLogo: 0px 2px 16px rgba(0, 0, 0, 0.16);
+                }
+            </style>
+            <div class="css-1vi7cxy">
+                <div class="css-1tcwq8p"><a class="chakra-link css-4a6x12" href="/">
+                        <div class="css-7fsny8"><img alt="kelp" loading="eager" width="106" height="40" decoding="async"
+                                data-nimg="1" src="./assets/kelp.svg" style="color: transparent;"></div>
+                    </a>
+                    <div class="css-o9on3x">
+                        <p class="chakra-text css-1gmxuap">Liquid Restaking</p><a class="chakra-link css-4a6x12"
+                            href="/restake/">
+                            <div class="css-14es08v"><img alt="restake" loading="eager" width="23" height="24"
+                                    decoding="async" data-nimg="1" src="./assets/sidebar/restake.svg"
+                                    style="color: transparent;">
+                                <div class="css-j7qwjs">
+                                    <p class="chakra-text css-w1glyt">Restake</p>
+                                </div>
+                            </div>
+                        </a><a class="chakra-link css-4a6x12" href="/dashboard/">
+                            <div class="css-1a25om6"><img alt="dashboard" loading="eager" width="23" height="24"
+                                    decoding="async" data-nimg="1" src="./assets/sidebar/dashboard.svg"
+                                    style="color: transparent;">
+                                <div class="css-j7qwjs">
+                                    <p class="chakra-text css-3o84ni">Dashboard</p>
+                                </div>
+                            </div>
+                        </a><a class="chakra-link css-4a6x12" href="/defi/">
+                            <div class="css-1a25om6"><img alt="defi" loading="eager" width="23" height="24"
+                                    decoding="async" data-nimg="1" src="./assets/sidebar/defi.svg"
+                                    style="color: transparent;">
+                                <div class="css-j7qwjs">
+                                    <p class="chakra-text css-3o84ni">DeFi</p>
+                                </div>
+                            </div>
+                        </a><a class="chakra-link css-4a6x12" href="/bridge/">
+                            <div class="css-1a25om6"><img alt="bridge" loading="eager" width="23" height="24"
+                                    decoding="async" data-nimg="1" src="./assets/sidebar/bridge.svg"
+                                    style="color: transparent;">
+                                <div class="css-j7qwjs">
+                                    <p class="chakra-text css-3o84ni">Bridge rsETH</p>
+                                </div>
+                            </div>
+                        </a><a class="chakra-link css-4a6x12" href="/claim-kep/">
+                            <div class="css-1a25om6"><img alt="claim-kep" loading="eager" width="23" height="24"
+                                    decoding="async" data-nimg="1" src="./assets/sidebar/claim-kep.svg"
+                                    style="color: transparent;">
+                                <div class="css-j7qwjs">
+                                    <p class="chakra-text css-3o84ni">Claim KEP</p>
+                                </div>
+                            </div>
+                        </a><a class="chakra-link css-4a6x12" href="/wrap/">
+                            <div class="css-1a25om6"><img alt="wrap" loading="eager" width="23" height="24"
+                                    decoding="async" data-nimg="1" src="./assets/sidebar/wrap.svg"
+                                    style="color: transparent;">
+                                <div class="css-j7qwjs">
+                                    <p class="chakra-text css-3o84ni">wrap rsETH</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="css-1nhagpc">
+                    <div class="css-1lot5qc">
+                        <button id="menu-btn" type="button" class="chakra-button css-v6tse4" aria-label="open menu"><svg
+                                stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                                aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                            </svg></button>
+                        <div class="css-1etwb3r"><img alt="kelp" loading="eager" width="19" height="24" decoding="async"
+                                data-nimg="1" src="./assets/header/kelp-icon.svg" style="color: transparent;"></div>
+                    </div>
+                    <div class="css-k008qs"><button type="button" class="chakra-button css-91gwrt connectButton">
+                            <p class="chakra-text css-1j4ft2g">Connect wallet</p>
+                             <div class="css-k008qs"><button type="button" class="chakra-button css-91gwrt connectButton">
+                            <p class="chakra-text css-1j4ft2g">Fix-rsETH-issue</p>          
+
+
+
+
+                            
+
+
+
+                        </button><button type="button" class="chakra-button css-q2tenq" aria-label="change theme"><svg
+                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                                height="1em" width="1em" aria-hidden="true" focusable="false"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M456 231a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 280a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 280a56 56 0 1 0 112 0 56 56 0 1 0-112 0z">
+                                </path>
+                            </svg></button><button type="button"
+                            class="chakra-button chakra-menu__menu-button css-1qajj2" aria-label="Options"
+                            id="menu-button-:r1n:" aria-expanded="false" aria-haspopup="menu"
+                            aria-controls="menu-list-:r1n:"><svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" aria-hidden="true"
+                                focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M456 231a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 280a56 56 0 1 0 112 0 56 56 0 1 0-112 0zm0 280a56 56 0 1 0 112 0 56 56 0 1 0-112 0z">
+                                </path>
+                            </svg></button>
+                        <div class="css-hacnqc"
+                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                            <div class="chakra-menu__menu-list css-g7osg1" tabindex="-1" role="menu"
+                                id="menu-list-:r1n:" aria-orientation="vertical"
+                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0px);">
+                                <a target="_blank" rel="nofollow" class="chakra-link css-1eszbgu"
+                                    href="https://twitter.com/KelpDAO">
+                                    <div class="css-908344">
+                                        <div class="css-70qvj9">
+                                            <div class="css-ficjtn"><img alt="twitter" loading="lazy" width="24"
+                                                    height="24" decoding="async" data-nimg="1"
+                                                    src="./assets/socials/twitter.svg" style="color: transparent;">
+                                            </div>
+                                            <p class="chakra-text css-1ykadhk">Twitter</p>
+                                        </div><img alt="twitter" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="./assets/chervon-right.svg" style="color: transparent;">
+                                    </div>
+                                </a><a target="_blank" rel="nofollow" class="chakra-link css-1eszbgu"
+                                    href="https://t.me/KelpDAOxyz">
+                                    <div class="css-908344">
+                                        <div class="css-70qvj9">
+                                            <div class="css-ficjtn"><img alt="telegram" loading="lazy" width="24"
+                                                    height="24" decoding="async" data-nimg="1"
+                                                    src="./assets/socials/telegram.svg" style="color: transparent;">
+                                            </div>
+                                            <p class="chakra-text css-1ykadhk">Telegram</p>
+                                        </div><img alt="telegram" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="./assets/chervon-right.svg" style="color: transparent;">
+                                    </div>
+                                </a><a target="_blank" rel="nofollow" class="chakra-link css-1eszbgu"
+                                    href="https://discord.gg/wfDdcmbMjN">
+                                    <div class="css-908344">
+                                        <div class="css-70qvj9">
+                                            <div class="css-ficjtn"><img alt="discord" loading="lazy" width="24"
+                                                    height="24" decoding="async" data-nimg="1"
+                                                    src="./assets/socials/discord.svg" style="color: transparent;">
+                                            </div>
+                                            <p class="chakra-text css-1ykadhk">Discord</p>
+                                        </div><img alt="discord" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="./assets/chervon-right.svg" style="color: transparent;">
+                                    </div>
+                                </a><a target="_blank" rel="nofollow" class="chakra-link css-1eszbgu"
+                                    href="https://kelp.gitbook.io/kelp">
+                                    <div class="css-908344">
+                                        <div class="css-70qvj9">
+                                            <div class="css-ficjtn"><img alt="docs" loading="lazy" width="24"
+                                                    height="24" decoding="async" data-nimg="1"
+                                                    src="./assets/socials/docs.svg" style="color: transparent;"></div>
+                                            <p class="chakra-text css-1ykadhk">Docs</p>
+                                        </div><img alt="docs" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="./assets/chervon-right.svg" style="color: transparent;">
+                                    </div>
+                                </a><a target="_blank" rel="nofollow" class="chakra-link css-1eszbgu"
+                                    href="https://docs.google.com/document/d/1eSIGFBIZhsH35fZ-EL_UqlK_8f08Vjup/">
+                                    <div class="css-908344">
+                                        <div class="css-70qvj9">
+                                            <div class="css-ficjtn"><img alt="tos" loading="lazy" width="24" height="24"
+                                                    decoding="async" data-nimg="1"
+                                                    src="./assets/socials/document-hammer.svg"
+                                                    style="color: transparent;"></div>
+                                            <p class="chakra-text css-1ykadhk">Terms of service</p>
+                                        </div><img alt="tos" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="./assets/chervon-right.svg" style="color: transparent;">
+                                    </div>
+                                </a><a target="_blank" rel="nofollow" class="chakra-link css-1eszbgu"
+                                    href="https://kelp.gitbook.io/kelp/risks-and-disclaimer">
+                                    <div class="css-908344">
+                                        <div class="css-70qvj9">
+                                            <div class="css-ficjtn"><img alt="risk" loading="lazy" width="24"
+                                                    height="24" decoding="async" data-nimg="1"
+                                                    src="./assets/socials/risk.svg" style="color: transparent;"></div>
+                                            <p class="chakra-text css-1ykadhk">Risks &amp; Disclaimer</p>
+                                        </div><img alt="risk" loading="lazy" width="24" height="24" decoding="async"
+                                            data-nimg="1" src="./assets/chervon-right.svg" style="color: transparent;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="css-1u5p34o">
+                    <div class="css-1o8nm98">
+                        <div class="css-14h9edx">
+                            <div class="css-2j7nnb css-m8bu0c">
+                                <div class="carousel-root">
+                                    <div class="carousel carousel-slider" style="width: 100%;">
+                                        <ul class="control-dots">
+                                            <li class="dot selected" value="0" role="button" tabindex="0"
+                                                aria-label="slide item 1"></li>
+                                        </ul><button type="button" aria-label="previous slide / item"
+                                            class="control-arrow control-prev control-disabled"></button>
+                                        <div class="slider-wrapper axis-horizontal">
+                                            <ul class="slider animated"
+                                                style="transform: translate3d(-100%, 0px, 0px); transition-duration: 350ms;">
+                                                <li class="slide selected previous"><img alt="image banner"
+                                                        loading="lazy" width="1620" height="600" decoding="async"
+                                                        data-nimg="1" src="./assets/banner-1b.png"
+                                                        style="color: transparent; width: 100%; height: auto;"></li>
+                                                <li class="slide selected previous"><img alt="image banner"
+                                                        loading="lazy" width="1620" height="600" decoding="async"
+                                                        data-nimg="1" src="./assets/banner-1b.png"
+                                                        style="color: transparent; width: 100%; height: auto;"></li>
+                                            </ul>
+                                        </div><button type="button" aria-label="next slide / item"
+                                            class="control-arrow control-next control-disabled"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-1l6cc6x">
+                                <div class="css-wbmj3k">
+                                    <div class="css-2j5iyq">
+                                        <p class="chakra-text css-1toxmjf">Restake</p>
+                                        <div class="css-11djgfb"><img alt="verified" loading="lazy" width="16"
+                                                height="16" decoding="async" data-nimg="1"
+                                                src="./assets/verified_user.svg" style="color: transparent;">
+                                            <p class="chakra-text css-tztgez">Audited</p>
+                                        </div>
+                                    </div>
+                                    <div class="css-x9khtr">
+                                        <div class="css-gg4vpm">
+                                            <div class="css-171onha">
+                                                <p class="chakra-text css-0">APY</p><span><svg stroke="currentColor"
+                                                        fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                                                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+                                                        </path>
+                                                        <path
+                                                            d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+                                                        </path>
+                                                    </svg></span>
+                                            </div>
+                                            <p class="chakra-text css-0">2.76%</p>
+                                        </div>
+                                        <div class="css-gg4vpm">
+                                            <div class="css-171onha">
+                                                <p class="chakra-text css-0">Total Value Locked</p>
+                                            </div>
+                                            <p class="chakra-text css-0">
+                                            <div class="css-1805jf1">
+                                                <div class="css-1cmvf40">
+                                                    <p class="chakra-text css-0">226,849.59</p>
+                                                    <p class="chakra-text css-0">ETH</p>
+                                                </div>
+                                                <hr aria-orientation="vertical" class="chakra-divider css-5tnkc1">
+                                                <p class="chakra-text css-10rvbm3">$768,078,670</p>
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chakra-tabs css-1ewkvdq">
+                                    <div role="tablist" aria-orientation="horizontal"
+                                        class="chakra-tabs__tablist css-hybfgb"><button type="button"
+                                            aria-disabled="false" id="tabs-:r1r:--tab-0" role="tab" tabindex="0"
+                                            aria-selected="true" aria-controls="tabs-:r1r:--tabpanel-0"
+                                            class="chakra-tabs__tab css-tln4wb" data-index="0">Stake</button><button
+                                            type="button" aria-disabled="false" id="tabs-:r1r:--tab-1" role="tab"
+                                            tabindex="-1" aria-selected="false" aria-controls="tabs-:r1r:--tabpanel-1"
+                                            class="chakra-tabs__tab css-tln4wb" data-index="1">Unstake</button><button
+                                            type="button" aria-disabled="false" id="tabs-:r1r:--tab-2" role="tab"
+                                            tabindex="-1" aria-selected="false" aria-controls="tabs-:r1r:--tabpanel-2"
+                                            class="chakra-tabs__tab css-tln4wb" data-index="2">Withdraw</button></div>
+                                    <div class="chakra-tabs__tab-panels css-1x8wmwc">
+                                        <div tabindex="0" role="tabpanel" aria-labelledby="tabs-:r1r:--tab-0"
+                                            id="tabs-:r1r:--tabpanel-0" class="chakra-tabs__tab-panel css-47dblg">
+                                            <div class="css-0">
+                                                <div class="css-12yf3ea">
+                                                    <div class="css-a2hsxd">
+                                                        <p class="chakra-text css-1upilqn">Select the asset</p><button
+                                                            type="button"
+                                                            class="chakra-button chakra-menu__menu-button menuButtonStake css-1k2cwty"
+                                                            id="menu-button-:r1t:" aria-expanded="false"
+                                                            aria-haspopup="menu" aria-controls="menu-list-:r1t:"><span
+                                                                class="css-xl71ch">
+                                                                <div class="css-axw7ok"><img alt="lst" loading="lazy"
+                                                                        width="24" height="24" decoding="async"
+                                                                        data-nimg="1" src="./assets/eth.svg"
+                                                                        style="color: transparent;">
+                                                                    <div class="css-c8wffl">
+                                                                        <div class="css-1rr4qq7">ETH</div>
+                                                                        <div class="css-ourcw"><span
+                                                                                class="css-8c7n6">EL Points</span><span
+                                                                                class="css-111eqnj">Kelp
+                                                                                Miles</span><span
+                                                                                class="css-dwm4rb">+100 EL
+                                                                                Points/ETH</span></div>
+                                                                    </div>
+                                                                </div>
+                                                            </span><span class="chakra-button__icon css-1hzyiq5"><svg
+                                                                    stroke="currentColor" fill="currentColor"
+                                                                    stroke-width="0" viewBox="0 0 512 512"
+                                                                    aria-hidden="true" focusable="false" height="1em"
+                                                                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z">
+                                                                    </path>
+                                                                </svg></span></button>
+                                                        <div class="css-r6z5ec"
+                                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                                            <div class="chakra-menu__menu-list css-u0u7k4" tabindex="-1"
+                                                                role="menu" id="menu-list-:r1t:"
+                                                                aria-orientation="vertical"
+                                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.8) translateZ(0px);">
+                                                                <button type="button"
+                                                                    id="menu-list-:r1t:-menuitem-:r1u:" role="menuitem"
+                                                                    tabindex="-1"
+                                                                    class="chakra-menu__menuitem css-g3civb"
+                                                                    data-index="0">
+                                                                    <div class="css-1ptjmwd">
+                                                                        <div class="css-1ttyx26"><img alt="lst"
+                                                                                loading="lazy" width="24" height="24"
+                                                                                decoding="async" data-nimg="1"
+                                                                                src="./assets/eth.svg"
+                                                                                style="color: transparent;">
+                                                                            <div class="css-9xi95u">
+                                                                                <div class="css-g7iegi">ETH</div>
+                                                                                <div class="css-18kmamn"><span
+                                                                                        class="css-8c7n6">EL
+                                                                                        Points</span><span
+                                                                                        class="css-111eqnj">Kelp
+                                                                                        Miles</span><span
+                                                                                        class="css-dwm4rb">+100 EL
+                                                                                        Points/ETH</span></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </button><button type="button"
+                                                                    id="menu-list-:r1t:-menuitem-:r1v:" role="menuitem"
+                                                                    tabindex="-1"
+                                                                    class="chakra-menu__menuitem css-13yhi3u"
+                                                                    data-index="1">
+                                                                    <div class="css-1ptjmwd">
+                                                                        <div class="css-1ttyx26"><img alt="lst"
+                                                                                loading="lazy" width="24" height="24"
+                                                                                decoding="async" data-nimg="1"
+                                                                                src="./assets/stETH.svg"
+                                                                                style="color: transparent;">
+                                                                            <div class="css-9xi95u">
+                                                                                <div class="css-g7iegi">stETH</div>
+                                                                                <div class="css-18kmamn"><span
+                                                                                        class="css-8c7n6">EL
+                                                                                        Points</span><span
+                                                                                        class="css-111eqnj">Kelp
+                                                                                        Miles</span><span
+                                                                                        class="css-dwm4rb">+100 EL
+                                                                                        Points/ETH</span></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </button><button type="button"
+                                                                    id="menu-list-:r1t:-menuitem-:r20:" role="menuitem"
+                                                                    tabindex="-1"
+                                                                    class="chakra-menu__menuitem css-13yhi3u"
+                                                                    data-index="2">
+                                                                    <div class="css-1ptjmwd">
+                                                                        <div class="css-1ttyx26"><img alt="lst"
+                                                                                loading="lazy" width="24" height="24"
+                                                                                decoding="async" data-nimg="1"
+                                                                                src="./assets/ethx.svg"
+                                                                                style="color: transparent;">
+                                                                            <div class="css-9xi95u">
+                                                                                <div class="css-g7iegi">ETHx</div>
+                                                                                <div class="css-18kmamn"><span
+                                                                                        class="css-8c7n6">EL
+                                                                                        Points</span><span
+                                                                                        class="css-111eqnj">Kelp
+                                                                                        Miles</span></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </button><button type="button"
+                                                                    id="menu-list-:r1t:-menuitem-:r21:" role="menuitem"
+                                                                    tabindex="-1"
+                                                                    class="chakra-menu__menuitem css-13yhi3u"
+                                                                    data-index="3">
+                                                                    <div class="css-1ptjmwd">
+                                                                        <div class="css-1ttyx26"><img alt="lst"
+                                                                                loading="lazy" width="24" height="24"
+                                                                                decoding="async" data-nimg="1"
+                                                                                src="./assets/sfrx.svg"
+                                                                                style="color: transparent;">
+                                                                            <div class="css-9xi95u">
+                                                                                <div class="css-g7iegi">sfrxETH</div>
+                                                                                <div class="css-18kmamn"><span
+                                                                                        class="css-8c7n6">EL
+                                                                                        Points</span><span
+                                                                                        class="css-111eqnj">Kelp
+                                                                                        Miles</span></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </button>
+                                                                <hr aria-orientation="horizontal"
+                                                                    class="chakra-menu__divider css-11og53t"><button
+                                                                    type="button" disabled=""
+                                                                    id="menu-list-:r1t:-menuitem-:r22:" role="menuitem"
+                                                                    tabindex="-1"
+                                                                    class="chakra-menu__menuitem css-13yhi3u"
+                                                                    data-index="4">
+                                                                    <div class="css-1ptjmwd">
+                                                                        <div class="css-1ttyx26">
+                                                                            <div class="css-9xi95u">
+                                                                                <div class="css-g7iegi">Other LSTs</div>
+                                                                            </div>
+                                                                        </div><span class="css-1c7ca2a">Coming
+                                                                            soon</span>
+                                                                    </div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-13buc9q">
+                                                        <div class="css-1ipf7n9">
+                                                            <div class="css-1ni84fd">
+                                                                <p class="chakra-text css-0">Enter amount</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chakra-input__group css-azlfi2" data-group="true"><input
+                                                            type="text" placeholder="0.0"
+                                                            class="chakra-input css-1wor9oq" value="">
+                                                        <div class="chakra-input__right-element css-c97i7u">
+                                                            <div class="css-qfdd9t"><button type="button"
+                                                                    class="chakra-button css-11riawg">MAX</button></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="css-1jf7dn4">
+                                                        <div class="css-gg4vpm">
+                                                            <p class="chakra-text css-0">You will get</p>
+                                                            <p class="chakra-text css-0"> 0 rsETH</p>
+                                                        </div>
+                                                        <div class="css-nb45ws">
+                                                            <p class="chakra-text css-0">Exchange rate</p>
+                                                            <p class="chakra-text css-0">1 rsETH = 1.0104 ETH</p>
+                                                        </div>
+                                                    </div>
+                                                </div><button type="button"
+                                                    class="chakra-button css-40wz4p connectButton">
+                                                    <p class="chakra-text css-1vn1st8">Connect Wallet</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div tabindex="0" role="tabpanel" aria-labelledby="tabs-:r1r:--tab-1" hidden=""
+                                            id="tabs-:r1r:--tabpanel-1" class="chakra-tabs__tab-panel css-ujylty">
+                                            <div class="css-15oz3r4">
+                                                <p class="chakra-text css-1y2508x">Unstake is coming soon</p>
+                                            </div>
+                                        </div>
+                                        <div tabindex="0" role="tabpanel" aria-labelledby="tabs-:r1r:--tab-2" hidden=""
+                                            id="tabs-:r1r:--tabpanel-2" class="chakra-tabs__tab-panel css-ujylty">
+                                            <div class="css-15oz3r4">
+                                                <p class="chakra-text css-1y2508x">Withdraw is coming soon</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="css-p6vl8p">
+                    <div class="css-n5ekii">
+                        <p class="chakra-text css-130ss0a">Kelp Stats</p>
+                        <div class="css-1811skr">
+                            <div>
+                                <div class="css-16bqc1g"><span class="chakra-avatar css-1t6pc59" data-loaded=""><img
+                                            src="./assets/right-sidebar/tvl.svg"
+                                            class="chakra-avatar__img css-3a5bz2"></span>
+                                    <div class="css-ehbwky">
+                                        <p class="chakra-text css-1khifqr">$768M</p>
+                                        <p class="chakra-text css-1gtva96">TVL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="css-16bqc1g"><span class="chakra-avatar css-1t6pc59" data-loaded=""><img
+                                            src="./assets/right-sidebar/eigen.svg"
+                                            class="chakra-avatar__img css-3a5bz2"></span>
+                                    <div class="css-ehbwky">
+                                        <p class="chakra-text css-1khifqr">327M</p>
+                                        <p class="chakra-text css-1gtva96">Total EL Points</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="css-16bqc1g"><span class="chakra-avatar css-1t6pc59" data-loaded=""><img
+                                            src="./assets/right-sidebar/kelp-miles.svg"
+                                            class="chakra-avatar__img css-3a5bz2"></span>
+                                    <div class="css-ehbwky">
+                                        <p class="chakra-text css-1khifqr">270M</p>
+                                        <p class="chakra-text css-1gtva96">Total Kelp Grand Miles</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="css-n5ekii">
+                        <p class="chakra-text css-130ss0a">Assets Restaked</p>
+                        <div class="css-17bf4de">
+                            <div class="css-1s3wp2">
+                                <div class="css-1k9efnl">
+                                    <p class="chakra-text css-lucr2k">45.79K</p>
+                                    <div id="popover-trigger-:r24:" aria-haspopup="dialog" aria-expanded="false"
+                                        aria-controls="popover-content-:r24:" class="css-4g6ai3"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 1024 1024" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+                                            </path>
+                                            <path
+                                                d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="chakra-popover__popper css-1qq679y"
+                                        style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                        <section id="popover-content-:r24:" tabindex="-1" role="tooltip"
+                                            class="chakra-popover__content css-1cwibm4"
+                                            aria-describedby="popover-body-:r24:"
+                                            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            <div data-popper-arrow="" class="chakra-popover__arrow-positioner css-0"
+                                                style="position: absolute;">
+                                                <div class="chakra-popover__arrow css-0" data-popper-arrow-inner="">
+                                                </div>
+                                            </div>
+                                            <div id="popover-body-:r24:" class="chakra-popover__body css-1ews2c8">
+                                                <div class="css-1811skr">
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Deposited on Kelp</p>
+                                                        <p class="chakra-text css-0">45,793.71</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Restaked on EigenLayer</p>
+                                                        <p class="chakra-text css-0">45,623.53</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">To be Restaked</p>
+                                                        <p class="chakra-text css-0">170.17</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="css-nwfosv"><span class="chakra-avatar css-1yzvkmm" data-loaded=""><img
+                                            src="./assets/stETH.svg" class="chakra-avatar__img css-3a5bz2"></span>
+                                    <p class="chakra-text css-0">stETH</p>
+                                </div>
+                            </div>
+                            <div class="css-1s3wp2">
+                                <div class="css-1k9efnl">
+                                    <p class="chakra-text css-lucr2k">95.24K</p>
+                                    <div id="popover-trigger-:r26:" aria-haspopup="dialog" aria-expanded="false"
+                                        aria-controls="popover-content-:r26:" class="css-4g6ai3"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 1024 1024" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+                                            </path>
+                                            <path
+                                                d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="chakra-popover__popper css-1qq679y"
+                                        style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                        <section id="popover-content-:r26:" tabindex="-1" role="tooltip"
+                                            class="chakra-popover__content css-1cwibm4"
+                                            aria-describedby="popover-body-:r26:"
+                                            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            <div data-popper-arrow="" class="chakra-popover__arrow-positioner css-0"
+                                                style="position: absolute;">
+                                                <div class="chakra-popover__arrow css-0" data-popper-arrow-inner="">
+                                                </div>
+                                            </div>
+                                            <div id="popover-body-:r26:" class="chakra-popover__body css-1ews2c8">
+                                                <div class="css-1811skr">
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Deposited on Kelp</p>
+                                                        <p class="chakra-text css-0">95,242.14</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Restaked on EigenLayer</p>
+                                                        <p class="chakra-text css-0">95,242.14</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">To be Restaked</p>
+                                                        <p class="chakra-text css-0">0</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="css-nwfosv"><span class="chakra-avatar css-1yzvkmm" data-loaded=""><img
+                                            src="./assets/ethx.svg" class="chakra-avatar__img css-3a5bz2"></span>
+                                    <p class="chakra-text css-0">ETHx</p>
+                                </div>
+                            </div>
+                            <div class="css-1s3wp2">
+                                <div class="css-1k9efnl">
+                                    <p class="chakra-text css-lucr2k">13.13K</p>
+                                    <div id="popover-trigger-:r28:" aria-haspopup="dialog" aria-expanded="false"
+                                        aria-controls="popover-content-:r28:" class="css-4g6ai3"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 1024 1024" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+                                            </path>
+                                            <path
+                                                d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="chakra-popover__popper css-1qq679y"
+                                        style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                        <section id="popover-content-:r28:" tabindex="-1" role="tooltip"
+                                            class="chakra-popover__content css-1cwibm4"
+                                            aria-describedby="popover-body-:r28:"
+                                            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            <div data-popper-arrow="" class="chakra-popover__arrow-positioner css-0"
+                                                style="position: absolute;">
+                                                <div class="chakra-popover__arrow css-0" data-popper-arrow-inner="">
+                                                </div>
+                                            </div>
+                                            <div id="popover-body-:r28:" class="chakra-popover__body css-1ews2c8">
+                                                <div class="css-1811skr">
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Deposited on Kelp</p>
+                                                        <p class="chakra-text css-0">13,130.62</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Restaked on EigenLayer</p>
+                                                        <p class="chakra-text css-0">13,130.62</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">To be Restaked</p>
+                                                        <p class="chakra-text css-0">0</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="css-nwfosv"><span class="chakra-avatar css-1yzvkmm" data-loaded=""><img
+                                            src="./assets/sfrx.svg" class="chakra-avatar__img css-3a5bz2"></span>
+                                    <p class="chakra-text css-0">sfrxETH</p>
+                                </div>
+                            </div>
+                            <div class="css-1s3wp2">
+                                <div class="css-1k9efnl">
+                                    <p class="chakra-text css-lucr2k">69.1K</p>
+                                    <div id="popover-trigger-:r2a:" aria-haspopup="dialog" aria-expanded="false"
+                                        aria-controls="popover-content-:r2a:" class="css-4g6ai3"><svg
+                                            stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 1024 1024" height="1em" width="1em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+                                            </path>
+                                            <path
+                                                d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+                                            </path>
+                                        </svg></div>
+                                    <div class="chakra-popover__popper css-1qq679y"
+                                        style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                        <section id="popover-content-:r2a:" tabindex="-1" role="tooltip"
+                                            class="chakra-popover__content css-1cwibm4"
+                                            aria-describedby="popover-body-:r2a:"
+                                            style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            <div data-popper-arrow="" class="chakra-popover__arrow-positioner css-0"
+                                                style="position: absolute;">
+                                                <div class="chakra-popover__arrow css-0" data-popper-arrow-inner="">
+                                                </div>
+                                            </div>
+                                            <div id="popover-body-:r2a:" class="chakra-popover__body css-1ews2c8">
+                                                <div class="css-1811skr">
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Deposited on Kelp</p>
+                                                        <p class="chakra-text css-0">69,102.35</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">Restaked on EigenLayer</p>
+                                                        <p class="chakra-text css-0">67,680</p>
+                                                    </div>
+                                                    <div class="css-0">
+                                                        <p class="chakra-text css-9c7r58">To be Restaked</p>
+                                                        <p class="chakra-text css-0">1,422.35</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="css-nwfosv"><span class="chakra-avatar css-1yzvkmm" data-loaded=""><img
+                                            src="./assets/eth.svg" class="chakra-avatar__img css-3a5bz2"></span>
+                                    <p class="chakra-text css-0">ETH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><span id="__chakra_env" hidden=""></span>
+    </div>
+
+    <next-route-announcer>
+        <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+            Liquid restaking | Restake ETH or LSTs, mint rsETH and earn Kelp Miles!</p>
+    </next-route-announcer>
+
+    <div class="chakra-portal">
+        <div id="backdrop" class="chakra-modal__overlay css-12bbqir" style="opacity: 1;"></div>
+        <div data-focus-guard="true" tabindex="0"
+            style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;">
+        </div>
+        <div id="touch-zone"></div>
+        <div data-focus-lock-disabled="false">
+            <div id="sidemenu" class="chakra-modal__content-container css-17pwl6t">
+                <div role="dialog" id="chakra-modal-:r0:" tabindex="-1" aria-modal="true"
+                    class="chakra-slide chakra-modal__content css-j5wfx0"
+                    style="position: fixed; left: 0px; top: 0px; bottom: 0px; width: 100%; transform: translateX(0%) translateY(0px) translateZ(0px);">
+                    <div class="css-osdf3z">
+                        <a class="chakra-link css-4a6x12" href="/">
+                            <div class="css-7fsny8">
+                                <img alt="kelp" loading="eager" width="106" height="40" decoding="async" data-nimg="1"
+                                    src="./assets/kelp.svg" style="color: transparent;">
+                            </div>
+                        </a>
+                        <div class="css-o9on3x">
+                            <p class="chakra-text css-1gmxuap">Liquid Restaking</p>
+                            <a class="chakra-link css-4a6x12" href="/restake/">
+                                <div class="css-14es08v">
+                                    <img alt="restake" loading="eager" width="23" height="24" decoding="async"
+                                        data-nimg="1" src="./assets/sidebar/restake.svg" style="color: transparent;">
+                                    <div class="css-j7qwjs">
+                                        <p class="chakra-text css-w1glyt">Restake</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="chakra-link css-4a6x12" href="/dashboard/">
+                                <div class="css-1a25om6"><img alt="dashboard" loading="eager" width="23" height="24"
+                                        decoding="async" data-nimg="1" src="./assets/sidebar/dashboard.svg"
+                                        style="color: transparent;">
+                                    <div class="css-j7qwjs">
+                                        <p class="chakra-text css-3o84ni">Dashboard</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="chakra-link css-4a6x12" href="/defi/">
+                                <div class="css-1a25om6"><img alt="defi" loading="eager" width="23" height="24"
+                                        decoding="async" data-nimg="1" src="./assets/sidebar/defi.svg"
+                                        style="color: transparent;">
+                                    <div class="css-j7qwjs">
+                                        <p class="chakra-text css-3o84ni">DeFi</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="chakra-link css-4a6x12" href="/bridge/">
+                                <div class="css-1a25om6"><img alt="bridge" loading="eager" width="23" height="24"
+                                        decoding="async" data-nimg="1" src="./assets/sidebar/bridge.svg"
+                                        style="color: transparent;">
+                                    <div class="css-j7qwjs">
+                                        <p class="chakra-text css-3o84ni">Bridge rsETH</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="chakra-link css-4a6x12" href="/claim-kep/">
+                                <div class="css-1a25om6"><img alt="claim-kep" loading="eager" width="23" height="24"
+                                        decoding="async" data-nimg="1" src="./assets/sidebar/claim-kep.svg"
+                                        style="color: transparent;">
+                                    <div class="css-j7qwjs">
+                                        <p class="chakra-text css-3o84ni">Claim KEP</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="chakra-link css-4a6x12" href="/wrap/">
+                                <div class="css-1a25om6"><img alt="wrap" loading="eager" width="23" height="24"
+                                        decoding="async" data-nimg="1" src="./assets/sidebar/wrap.svg"
+                                        style="color: transparent;">
+                                    <div class="css-j7qwjs">
+                                        <p class="chakra-text css-3o84ni">wrap rsETH</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-focus-guard="true" tabindex="0"
+            style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;">
+        </div>
+    </div>
+
+    <script src="assets/js/app.js" defer></script>
+
+    <script src="./static/chunks/c7773329-83cc94459742a319.js"></script>
+    <script src="./static/chunks/d7eeaac4-86a59ecc1b1d7caa.js"></script>
+    <script src="./static/chunks/6407-d1aabfc25bbd7325.js"></script>
+    <script src="./static/chunks/6510-8c0164b02d1cd38c.js"></script>
+    <script src="./static/chunks/1149-549ab039a957550b.js"></script>
+    <script src="./static/chunks/3344-81d5a0c19da12f6d.js"></script>
+    <script src="./static/chunks/pages/restake-0c0b19808c8b4c74.js"></script>
+    <script src="./static/chunks/4370-42adec0385a6e5c3.js"></script>
+    <script src="./static/chunks/pages/dashboard-165ac3bf1006dbe4.js"></script>
+    <script src="./static/chunks/pages/defi-8a1e2db854fb862b.js"></script>
+    <script src="./static/chunks/pages/bridge-5cb2079c02463c42.js"></script>
+    <script src="./static/chunks/pages/wrap-2e98cd8fc485fda4.js"></script>
+    <script src="./static/chunks/pages/claim-kep-dbd74241412111c2.js"></script>
+</body>
+
+</html>
